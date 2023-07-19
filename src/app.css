@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .main{
+    @apply w-10/12;
+    @apply mx-auto;
+    @apply sm:w-4/5;
+  }
+}
