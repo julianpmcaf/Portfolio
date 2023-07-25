@@ -51,11 +51,9 @@
                     </ul>
                 </Collapsible>
                 <Collapsible color="white" bind:open={tabs[2]}>
-                    <h1 slot="title">Any education or potato?</h1>
+                    <h1 slot="title">Have you done any volunteering?</h1>
                     <ul class=" list-disc list-outside py-4 text-white" slot="description">
-                        <li>Co-Founded a SaaS startup that generated 20,000+</li>
-                        <li>In my company I worked on projects for clients such as the University of Twente, Mozo, and Q-NECC</li>
-                        <li>Began programming at 16 where I generated 2,000+ monthly doing blockchain development work.</li>
+                        <li>For one school year I was a student mentor helping new computer science students get adjusted to life in Amsterdam as well with help with there studies.</li>
                     </ul>
                 </Collapsible>
             </div>
@@ -82,11 +80,9 @@
                     </ul>
                 </Collapsible>
                 <Collapsible color="black" open={tabs[2]}>
-                    <h1 slot="title">Any education or potato?</h1>
+                    <h1 slot="title">Have you done any volunteering?</h1>
                     <ul class=" list-disc list-outside py-4 text-black" slot="description">
-                        <li>Co-Founded a SaaS startup that generated 20,000+</li>
-                        <li>In my company I worked on projects for clients such as the University of Twente, Mozo, and Q-NECC</li>
-                        <li>Began programming at 16 where I generated 2,000+ monthly doing blockchain development work.</li>
+                        <li>For one school year I was a student mentor helping new computer science students get adjusted to life in Amsterdam as well with help with there studies.</li>
                     </ul>
                 </Collapsible>
             </div>
