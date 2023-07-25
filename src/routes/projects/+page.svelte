@@ -12,10 +12,12 @@
 
     function  handleMousemove(event){
         if (
-            text.getBoundingClientRect().y + window.scrollY > $m.y - 50 || 
-            text.getBoundingClientRect().y + window.scrollY + text.clientHeight > $m.y + 50 && 
+            text.getBoundingClientRect().y + window.scrollY < $m.y + 50 && 
+            text.getBoundingClientRect().y + window.scrollY + text.clientHeight > $m.y - 50 &&
             text.getBoundingClientRect().x + window.scrollX < $m.x + 50 &&
             text.getBoundingClientRect().x + window.scrollX > $m.x - text.clientWidth - 50
+
+            
         ){
             size.set(100)
         }
@@ -30,8 +32,8 @@
 
 <svelte:window on:mousemove={handleMousemove}  />
 <div class="absolute bg-purple-500 z-10  w-full" style="clip-path: circle({$size}px at {$m.x}px {$m.y}px)" >
-    <div bind:this={text}>
-        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 main py-10 min-h-screen">
+    <div  class="">
+        <div bind:this={text} class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 main py-10 min-h-screen ">
             <div class="border-2 border-white p-5 w-80 sm:w-96 h-96 mx-auto ">
                 <img src="destination.png" class="w-full h-full object-contain" alt="ainsley">
             </div>
