@@ -3,12 +3,13 @@
     import Navbar from "../components/navbar.svelte";
     import Footer from "../components/footer.svelte";
     import PageTransition from "../components/pageTransition.svelte";
-    import { page } from "$app/stores";
+
+    export let data
 </script>
 
     <Navbar/>
-        <PageTransition refresh={$page.url.pathname}>
-            <slot/>
+       <PageTransition key={data.url}>
+                <slot/>
         </PageTransition>
     <Footer/>
 
