@@ -7,10 +7,9 @@
     import Cursor from '../components/cursor.svelte';
     let text;
     let tabs = {1: false, 2: false, 3:false}
-    let y;
 </script>
 
-    <svelte:window bind:scrollY={y} />
+
     <Cursor text={text}>
         <div class=" flex justify-center h-fit  py-[75%] sm:py-[20%] 2xl:py-[25%] 3xl:py-[15%] items-center flex-col" >
             <div class=" text-white font-bold text-6xl w-fit" >
@@ -48,11 +47,11 @@
         <div class=" font-bold text-6xl ">
             <p>Hi, i'm Julian</p>
         </div>
-        {#if y < 10}
+        <!-- {#if y < 10}
             <div class=" absolute bottom-10 animate-bounce" in:fade out:fade>
                     <Fa icon={faArrowDown} pull="right" size="lg"/>
             </div>
-        {/if}
+        {/if} -->
         <div class="py-[120%] sm:py-[50%] 2xl:py-[45%] 3xl:py-[30%] w-4/5 lg:w-2/5" >
             <div class="border-2 border-black border-b-0">
                 <Collapsible color="black" open={tabs[1]}>

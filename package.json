@@ -25,7 +25,11 @@
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.4.0",
 		"@fortawesome/free-solid-svg-icons": "^6.4.0",
+		"@types/grecaptcha": "^3.0.4",
+		"axios": "^1.4.0",
+		"hcaptcha": "^0.1.1",
 		"svelte-fa": "^3.0.4",
+		"svelte-forms-lib": "^2.0.1",
 		"svelte-toast": "^1.0.0",
 		"svelte-toasts": "^1.1.2",
 		"tailwind": "^4.0.0"

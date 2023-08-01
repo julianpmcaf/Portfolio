@@ -31,11 +31,11 @@
             </div>
             <div class="w-1/3 border-r-2 border-black h-full">
                 <p class="text-center font-semibold">Framework</p>
-                <p class="text-center">React.js</p>
+                <p class="text-center">SwiftUI</p>
             </div>
             <div class="w-1/3  h-full">
                 <p class="text-center font-semibold">Language</p>
-                <p class="text-center">HTML/JS</p>
+                <p class="text-center">Swift</p>
             </div>
         </div>
     </div>
@@ -49,11 +49,11 @@
             </div>
             <div class="w-1/3 border-r-2 border-black h-full">
                 <p class="text-center font-semibold">Framework</p>
-                <p class="text-center">SwiftUI</p>
+                <p class="text-center">React.js</p>
             </div>
             <div class="w-1/3  h-full">
                 <p class="text-center font-semibold">Language</p>
-                <p class="text-center">Swift</p>
+                <p class="text-center">HTML/JS</p>
             </div>
         </div>
     </div>

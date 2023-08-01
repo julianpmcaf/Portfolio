@@ -3,6 +3,9 @@
     import { spring } from 'svelte/motion';
 
     export let text;
+    export let y = 0;
+    export let screenSize = 1920;
+
     let m = spring({y: 0, x: 0}, {
 		stiffness: 0.1,
 		damping: 0.25
@@ -27,7 +30,7 @@
 
 </script>
 
-<svelte:window on:mousemove={handleMousemove} />
+<svelte:window on:mousemove={handleMousemove} bind:scrollY={y} bind:innerWidth={screenSize}/>
 
 <div class="cursor-none">
     <div class="absolute bg-purple-500 z-10  w-full" style="clip-path: circle({$size}px at {$m.x}px {$m.y}px)" >
