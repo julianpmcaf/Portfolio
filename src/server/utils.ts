@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { EMAIL_KEY, EMAIL_ENDPOINT } from '$env/static/private';
+import { EMAIL_KEY, EMAIL_ENDPOINT, GITHUB_TOKEN, EMAIL } from '$env/static/private';
 export const sendEmail = (controller: AbortSignal, sender: FormDataEntryValue, name: FormDataEntryValue, message: FormDataEntryValue | null): any => 
     
     axios({
@@ -17,7 +17,7 @@ export const sendEmail = (controller: AbortSignal, sender: FormDataEntryValue, n
             },
             "to":[  
                 {  
-                    "email":"julianpm.caf@gmail.com",
+                    "email":EMAIL,
                     "name":"Julian Chin A Foeng"
                 }
             ],
@@ -27,6 +27,36 @@ export const sendEmail = (controller: AbortSignal, sender: FormDataEntryValue, n
         signal: controller
     })
     .then(response => {
+        return ({status: 200, data: response.data})
+    })
+    .catch(error => {
+        if (error.response) {
+            console.log(error.response.status);
+            console.log(error.response.headers);
+            return ({status: 500, data: error.response})
+        }
+        else if (error.request) {
+            // The request was made but no response was received
+            console.log(error.request);
+            return ({status: 504, data: error.response})
+        } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log('Error', error.message);
+            return ({status: 500, data: error.response})
+        }
+    })
+
+export const getRepositories = (controller: AbortSignal): any => 
+    axios({
+        method: 'get',
+        headers: {
+            "Accept": "application/vnd.github+json",
+            "Authorization":"Bearer "+ GITHUB_TOKEN,
+            "X-GitHub-Api-Version":"2022-11-28"
+        },
+        url: 'https://api.github.com/user/repos',
+        signal: controller
+    }).then(response => {
         return ({status: 200, data: response.data})
     })
     .catch(error => {
