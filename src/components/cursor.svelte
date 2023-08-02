@@ -32,7 +32,7 @@
 
 <svelte:window on:mousemove={handleMousemove} bind:scrollY={y} bind:innerWidth={screenSize}/>
 
-<div class="">
+<div class="cursor-none">
     <div class="absolute bg-purple-500 z-10  w-full" style="clip-path: circle({$size}px at {$m.x}px {$m.y}px)" >
         <slot/>
     </div>
