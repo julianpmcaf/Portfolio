@@ -1,7 +1,9 @@
 
 
 <script>
-    
+    import Fa from 'svelte-fa'
+    import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+
     import Cursor from '../../components/cursor.svelte';
     let text;
     export let data;
@@ -15,13 +17,10 @@
                         <div class="border-2 border-white p-5 w-80 sm:w-96 h-96 mx-auto ">
                             <!-- <img src="destination.png" class="w-full h-full object-contain" alt="project"> -->
                             <h1 class="font-bold text-6xl text-white">View Repository</h1>
+                            <Fa icon={faArrowUpRightFromSquare} color="white" class="pt-4" size='4x'/>
                         </div>
                     </a>
                 {/each}
-                <!-- 
-                <div class="border-2  border-white p-5 w-80 sm:w-96 h-96 mx-auto">
-                    <img src="jobFinder.png" class="w-full h-full object-contain" alt="project">
-                </div> -->
             </div>
         </div>
 </Cursor> 
