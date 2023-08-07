@@ -7,7 +7,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"deploy": "pnpm build && pnpx gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
@@ -27,6 +28,7 @@
 		"@fortawesome/free-solid-svg-icons": "^6.4.0",
 		"@types/grecaptcha": "^3.0.4",
 		"axios": "^1.4.0",
+		"gh-pages": "^5.0.0",
 		"hcaptcha": "^0.1.1",
 		"octokit": "^3.1.0",
 		"svelte-fa": "^3.0.4",

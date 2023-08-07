@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { EMAIL_KEY, EMAIL_ENDPOINT, GITHUB_TOKEN, EMAIL } from '$env/static/private';
+import { EMAIL_KEY, EMAIL_ENDPOINT, GH_TOKEN, EMAIL } from '$env/static/private';
 export const sendEmail = (controller: AbortSignal, sender: FormDataEntryValue, name: FormDataEntryValue, message: FormDataEntryValue | null): any => 
     
     axios({
@@ -51,7 +51,7 @@ export const getRepositories = (controller: AbortSignal): any =>
         method: 'get',
         headers: {
             "Accept": "application/vnd.github+json",
-            "Authorization":"Bearer "+ GITHUB_TOKEN,
+            "Authorization":"Bearer "+ GH_TOKEN,
             "X-GitHub-Api-Version":"2022-11-28"
         },
         url: 'https://api.github.com/user/repos',
