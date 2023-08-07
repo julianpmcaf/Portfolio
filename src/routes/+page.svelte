@@ -89,7 +89,7 @@
                 <Collapsible color="black" open={tabs[3]}>
                     <h1 slot="title">Have you done any volunteering?</h1>
                     <ul class=" list-disc list-outside py-4 text-black" slot="description">
-                        <li>I volunteered as a student mentor for incoming computer science student where I oversaw their introduction to the VU computerscience facilities and faculty for a year.</li>
+                        <li>I volunteered as a student mentor for incoming computer science student where I oversaw their introduction to the VU computer science facilities and faculty for a year.</li>
                     </ul>
                 </Collapsible>
                 <Collapsible color="black" bind:open={tabs[4]}>
